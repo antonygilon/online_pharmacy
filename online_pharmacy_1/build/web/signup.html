@@ -1,0 +1,74 @@
+<html>
+    <style>
+div {
+  background-color: #FFFFFF;
+  width: 700px;
+  border: 15px solid dodgerblue;
+  padding: 50px;
+  margin: 20px;
+}
+ .button {
+  background-color: #1E90FF;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+    <head>
+        <link rel="stylesheet" href="styles1.css">
+        <title>Registration</title>
+    </head>
+    <body>
+        <center>
+        <form action="signup.jsp" style="border:1px solid #ccc" method="POST">
+            <div class="container">
+              <h1>Sign Up</h1>
+              <p>New to this site?Create an account to continue shopping.</p>
+              <hr>
+        <h2>
+              <label for="name"><b>Name</b></label>
+              <input type="text" placeholder="Enter Your name" name="name" required>
+              <br/>
+
+              <label for="username"><b>User Name</b></label>
+              <input type="text" placeholder="Enter Your User name" name="username" required>
+              <br/>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+              <br/>
+          
+              
+              <label for="email"><b>Email</b></label>
+              <input type="email" placeholder="Enter Email" name="mail" required>
+              <br/>
+              <label for="phone"><b>Phone Number</b></label>
+              <input type="text" placeholder="Enter Your Phone Number" name="phonenum" required>
+              <br/> 
+              <label for="address"><b>Address</b></label>
+              <input type="text" placeholder="Enter Your Address" name="address" required>
+              <br/>
+        
+          
+              <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+              </label>
+          </h2>
+              <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+          
+              <br>
+                <button type="button" class="button">Cancel</button>
+                <button type="submit" class="button">Sign Up</button>
+              
+            
+          </form>
+          <br>
+          <p>Already a member?Click <a href="signin.html"> here</a> to sign in</p>
+          </div></body>
+</html>

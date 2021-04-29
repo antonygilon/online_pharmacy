@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 22-Mar-2020, 11:16:15 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.pharmacy.Orders" table="orders" catalog="online_pharmacy" optimistic-lock="version">
+        <id name="orderId" type="java.lang.Integer">
+            <column name="order_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="users" class="com.pharmacy.Users" fetch="select">
+            <column name="order_by" not-null="true" />
+        </many-to-one>
+        <property name="totalCost" type="int">
+            <column name="total_cost" not-null="true" />
+        </property>
+        <set name="purchases" table="purchase" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="order_id" not-null="true" />
+            </key>
+            <one-to-many class="com.pharmacy.Purchase" />
+        </set>
+    </class>
+</hibernate-mapping>
